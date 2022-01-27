@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <Header></Header>
 
-      <Link href="/paypal">
+      <Link href="/paypal/soz">
         <p>Go to Paypal</p>
       </Link>
 
