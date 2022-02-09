@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "../../components/Header";
-import styles from "../../styles/Home.module.scss";
 
 class PaypalButton extends React.Component {
   constructor(props) {
@@ -65,8 +63,7 @@ class PaypalButton extends React.Component {
   render() {
     return (
       <div>
-        <Header />
-        <div className={styles.center}>
+        <div className="center">
           <h1>Purchase Songs of Zion</h1>
           <button>
             <em>P U R C H A S E</em>
