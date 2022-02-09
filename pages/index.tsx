@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from "../styles/Home.module.css";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.scss";
 
-import Header from '../components/Header';
-import Link from 'next/dist/client/link';
+import Header from "../components/Header";
+import Link from "next/dist/client/link";
 
 export default function Home() {
   return (
@@ -18,7 +18,6 @@ export default function Home() {
       <Link href="/paypal/soz">
         <p>Go to Paypal</p>
       </Link>
-
     </div>
-  )
+  );
 }

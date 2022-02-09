@@ -1,31 +1,31 @@
-@import 'variables.module.scss';
+@import "variables.module.scss";
 
 .navBar {
-    position: sticky;
-    background: $hymnal-red;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    color: $silver-lettering;
-    padding: 0 30px;
+  position: sticky;
+  background: $hymnal-red;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: $silver-lettering;
+  padding: 0 30px;
 
-    display: flex;
-    
-    h1 {
-        flex-grow: 1;
-        min-width: 300px;
-    }
+  display: flex;
+
+  h1 {
+    flex-grow: 1;
+    min-width: 300px;
+  }
 }
 
 .headerOptions {
-    flex-grow: 2;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  flex-grow: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .headerLink {
-    font-weight: bold;
+  font-weight: bold;
 }
