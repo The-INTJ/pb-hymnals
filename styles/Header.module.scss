@@ -1,4 +1,5 @@
 @import "variables.module.scss";
+@import "functions/mixins.scss";
 
 .navBar {
   position: sticky;
@@ -21,9 +22,18 @@
   flex-grow: 2;
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  @include layout-for($desktop-breakpoint) {
+    flex-direction: row;
+  }
+  @include layout-for($tablet-breakpoint) {
+    flex-direction: row;
+  }
+  @include layout-for($mobile-breakpoint) {
+    flex-direction: column;
+  }
 }
 
 .headerLink {
