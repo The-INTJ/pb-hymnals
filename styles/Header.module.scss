@@ -12,9 +12,12 @@
 
   display: flex;
 
+  font-family: $default-font;
+
   h1 {
     flex-grow: 1;
-    min-width: 300px;
+    white-space: nowrap;
+    margin-right: 15px;
   }
 }
 
