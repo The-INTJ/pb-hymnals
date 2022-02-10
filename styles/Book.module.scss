@@ -10,7 +10,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 25vw;
+  justify-content: flex-end;
+  min-width: 350px;
+  min-height: 460px;
 }
 .container:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);

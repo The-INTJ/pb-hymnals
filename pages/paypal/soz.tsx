@@ -65,7 +65,7 @@ class PaypalButton extends React.Component {
       <div>
         <div className="center">
           <h1>Purchase Songs of Zion</h1>
-          <button>
+          <button className="default-button">
             <em>P U R C H A S E</em>
           </button>
         </div>

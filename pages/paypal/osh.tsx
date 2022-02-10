@@ -12,8 +12,8 @@ class PaypalButton extends React.Component {
     return (
       <div>
         <div className="center">
-          <h1>Purchase the Old School Hymnal</h1>
-          <button>
+          <h1 className="h1-styles">Purchase the Old School Hymnal</h1>
+          <button className="default-button">
             <em>P U R C H A S E</em>
           </button>
         </div>
