@@ -3,6 +3,9 @@ import Header from "../components/Header";
 import Link from "next/dist/client/link";
 import Book from "../components/Book";
 
+import sozImage from "/public/soz.jpg";
+import oshImage from "/public/centennial.png";
+
 export default function Home() {
     return (
       <div className="container">
@@ -14,13 +17,15 @@ export default function Home() {
         <div className="main-div">
           <Book
             destination="/paypal/soz"
-            image="../public/soz.jpg"
+            image={sozImage}
+            altText="Songs of Zion hymn book"
             title="Songs of Zion"
             description="The newest songs written by people you know"
           />
           <Book
             destination="/paypal/osh"
-            image="../public/pbh.png"
+            image={oshImage}
+            altText="Centennial Edition Old School hymn book"
             title="Centennial"
             description="The old and gold"
           />
