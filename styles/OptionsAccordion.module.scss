@@ -1,0 +1,66 @@
+@import '../styles/functions/mixins.scss';
+@import '../styles/variables.module.scss';
+
+.navContainer {
+    flex-grow: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  
+    @include layout-for($desktopBreakpoint) {
+      flex-direction: row;
+    }
+    @include layout-for($tabletBreakpoint) {
+      flex-direction: row;
+    }
+    @include layout-for($mobileBreakpoint) {
+      flex-direction: column;
+    }
+  }
+  
+  .optionsLink {
+    font-weight: bold;
+  }
+
+  .mobileNav {
+    width: 50px;
+    height: 50px;
+    border: 3px solid $silver-lettering;
+    border-radius: 5px;
+    padding: 0 5px;
+
+    div {
+      hr {
+        width: 100%;
+        color: $silver-lettering;
+        background-color: $silver-lettering;
+        border: 1px solid $silver-lettering;
+        height: 3px;
+      }
+    }
+    .mobileLinksClose {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      width: 5px;
+      height: 5px;
+
+      font-style: bold;
+      font-weight: bolder;
+    }
+    .mobileLinks {
+      position: relative;
+      top: 10px;
+      right: 108px;
+
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+
+      width: 150px;
+      border: 3px solid $silver-lettering;
+      border-radius: 5px;
+      background-color: $hymnal-red;
+    }
+  }
