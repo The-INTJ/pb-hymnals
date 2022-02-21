@@ -9,7 +9,7 @@ const Header = (props) => {
       <Link href="/">
         <h1>The PBH</h1>
       </Link>
-      <OptionsAccordion options={[["/", "About"], ["/", "Account"]]} />
+      <OptionsAccordion options={[["/about", "About"], ["/account", "Account"]]} />
     </div>
   );
 };
