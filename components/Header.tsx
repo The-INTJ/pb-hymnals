@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Header.module.scss";
 import Link from "next/dist/client/link";
+import OptionsAccordion from "./OptionsAccordion";
 
 const Header = (props) => {
   return (
@@ -8,14 +9,7 @@ const Header = (props) => {
       <Link href="/">
         <h1>The PBH</h1>
       </Link>
-      <div className={styles.headerOptions}>
-        <p className={styles.headerLink} onClick={props.breweries}>
-          About
-        </p>
-        <p className={styles.headerLink} onClick={props.account}>
-          Account
-        </p>
-      </div>
+      <OptionsAccordion options={[["/", "About"], ["/", "Account"]]} />
     </div>
   );
 };
