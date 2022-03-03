@@ -1,19 +1,12 @@
-import Head from "next/head"
-import Header from "../components/Header";
-import Link from "next/dist/client/link";
 import Book from "../components/Book";
 
 import sozImage from "/public/soz.jpg";
 import oshImage from "/public/centennial.png";
+import osh12Image from "/public/osh12.jpg";
 
 export default function Home() {
     return (
       <div className="container">
-        <Head>
-          <title>PBH</title>
-          <meta name="description" content="Primitive Baptist Hymnals" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
         <div className="main-div">
           <Book
             destination="/paypal/soz"
@@ -23,11 +16,18 @@ export default function Home() {
             description="The newest songs written by people you know"
           />
           <Book
-            destination="/paypal/osh"
+            destination="/paypal/osh100"
             image={oshImage}
             altText="Centennial Edition Old School hymn book"
             title="Centennial"
             description="The old and gold"
+          />
+          <Book
+            destination="/paypal/osh12"
+            image={osh12Image}
+            altText="Twelth Edition Old School Hymnal"
+            title="12th Edition"
+            description="The older and gold"
           />
         </div>
       </div>

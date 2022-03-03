@@ -7,9 +7,17 @@ const Header = (props) => {
   return (
     <div className={styles.navBar}>
       <Link href="/">
-        <h1>The PBH</h1>
+        <div className={styles.h1ToolTip}>
+          <span>Old Baptist Hymnals</span>
+          <h1 id={styles.hoverDescription}>The OBH</h1>
+        </div>
       </Link>
-      <OptionsAccordion options={[["/about", "About"], ["/account", "Account"]]} />
+      <OptionsAccordion
+        options={[
+          ["/about", "About"],
+          ["/account", "Account"],
+        ]}
+      />
     </div>
   );
 };
