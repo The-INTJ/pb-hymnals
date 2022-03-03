@@ -1,6 +1,6 @@
 import React from "react";
 
-class PaypalButton extends React.Component {
+class Soz extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -74,4 +74,4 @@ class PaypalButton extends React.Component {
   }
 }
 
-export default PaypalButton;
+export default Soz;
