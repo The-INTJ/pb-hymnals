@@ -58,8 +58,10 @@ a {
   -webkit-user-select: none;
   touch-action: manipulation;
   margin: 20px;
-}
 
-.h1-styles {
-  
+  &:hover {
+    transition-duration: 50ms;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
 }
