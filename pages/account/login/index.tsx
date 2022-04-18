@@ -1,17 +1,19 @@
 import {
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signInWithPopup,
+  signInWithEmailAndPassword
 } from "firebase/auth";
-import { NextResponse } from "next/server";
-import React, { useState } from "react";
-import { auth, provider } from "../../../firebase/clientApp";
+import { NextRouter, useRouter } from "next/router";
+import React, { useContext, useState } from "react";
+import { UserContext } from "../../../lib/context";
+import { auth } from "../../../lib/firebase";
 
 import styles from "../../../styles/Login.module.scss";
 
-const emailPassSignIn = async (email: string, password: string) => {
+const emailPassSignIn = async (email: string, password: string, router: NextRouter) => {
   try {
-    signInWithEmailAndPassword(auth, email, password).catch(function (error) {
+    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      router.replace("/account");
+    }).catch(function (error) {
       var errorCode = error.code;
       var errorMessage = error.message;
       alert(errorMessage);
@@ -35,6 +37,8 @@ const emailPassRegister = async (email: string, password: string) => {
 };
 
 export default function Login() {
+  const router = useRouter();
+  const { user, username } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -56,7 +60,7 @@ export default function Login() {
       <div className={styles.buttonsContainer}>
         <button
           className="default-button"
-          onClick={() => emailPassSignIn(email, password)}
+          onClick={() => emailPassSignIn(email, password, router)}
         >
           Login
         </button>
