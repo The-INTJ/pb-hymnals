@@ -1,0 +1,7 @@
+@import "./functions/mixins.scss";
+
+.accountInfoContainer {
+    button {
+        @include default-button-styles();
+    }
+}

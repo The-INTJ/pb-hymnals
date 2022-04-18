@@ -1,11 +1,17 @@
 import "../styles/globals.scss";
 import Layout from '../components/Layout'
+import { UserContext } from "../lib/context";
+
+import { useUserData } from '../lib/hooks';
 
 function MyApp({ Component, pageProps }) {
+  const userData = useUserData();
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <UserContext.Provider value={ userData } >
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </UserContext.Provider>
   )
 }
 
