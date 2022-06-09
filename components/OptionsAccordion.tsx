@@ -1,16 +1,11 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import styles from "../styles/OptionsAccordion.module.scss";
-import globalVariables from "../styles/variables.module.scss";
+import styles from "../styles/components/OptionsAccordion.module.scss";
 
 interface OptionArray {
   options: [location: string, displayName: string][];
 }
 function OptionsAccordion(props: OptionArray) {
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
   const [navclicked, setNavClicked] = useState(false);
   const size = useWindowSize();
 
@@ -24,7 +19,6 @@ function OptionsAccordion(props: OptionArray) {
 
   let mobileStructureOnClick = (
     <div className={styles.mobileLinks}>
-        <div className={styles.mobileLinksClose} onClick={() => setNavClicked(false)}>X</div>
         {options}
     </div>
   )
@@ -58,7 +52,7 @@ function useWindowSize() {
       // @ts-ignore
       function handleResize() {
         // Set window width/height to state
-        let mobileState = window.innerWidth <= parseInt(globalVariables.mobileBreakpoint);
+        let mobileState = window.innerWidth <= parseInt(styles.mobileBreakpoint);
         setWindowSize({
           width: window.innerWidth,
           height: window.innerHeight,

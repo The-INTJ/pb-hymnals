@@ -1,5 +1,4 @@
-@import '../styles/functions/mixins.scss';
-@import '../styles/variables.module.scss';
+@import '../utility/utility.scss';
 
 .navContainer {
     flex-grow: 2;
@@ -8,19 +7,21 @@
     justify-content: space-around;
     align-items: flex-end;
   
-    @include layout-for($desktopBreakpoint) {
+    @include layout-for(desktop) {
       flex-direction: row;
     }
-    @include layout-for($tabletBreakpoint) {
+    @include layout-for(tablet) {
       flex-direction: row;
     }
-    @include layout-for($mobileBreakpoint) {
+    @include layout-for(mobile) {
       flex-direction: column;
+      justify-content: flex-end;
     }
   }
   
   .optionsLink {
     font-weight: bold;
+    font-size: $font-size-large;
   }
 
   .mobileNav {
@@ -36,36 +37,32 @@
         color: $silver-lettering;
         background-color: $silver-lettering;
         border: 1px solid $silver-lettering;
-        height: 3px;
+        height: 4px;
       }
     }
     .mobileLinksClose {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      width: 5px;
-      height: 5px;
+      display: flex;
 
       font-style: bold;
       font-weight: bolder;
     }
     .mobileLinks {
-      position: relative;
-      top: 15px;
-      right: 108px;
+      position: absolute;
+      top: 70px;
+      left: 0;
 
       display: flex;
       flex-direction: column;
-      padding: 20px;
+      justify-content: space-between;
+      padding: 0 15px 15px;
 
-      width: 150px;
-      border: 3px solid $silver-lettering;
+      width: 100vw;
       border-radius: 5px;
       background-color: $hymnal-red;
-      font-size: 1.3em;
-      
+
       a {
-        margin: 5px 0 5px 0;
+        padding: 15px 0;
+        border-bottom: 3px solid $silver-lettering;
       }
     }
   }

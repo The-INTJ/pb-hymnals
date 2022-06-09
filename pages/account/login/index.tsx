@@ -7,7 +7,7 @@ import React, { useContext, useState } from "react";
 import { UserContext } from "../../../lib/context";
 import { auth } from "../../../lib/firebase";
 
-import styles from "../../../styles/Login.module.scss";
+import styles from "../../../styles/pages/Login.module.scss";
 
 const emailPassSignIn = async (email: string, password: string, router: NextRouter) => {
   try {
