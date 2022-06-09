@@ -1,18 +1,7 @@
-/* Colors */
-$hymnal-red: #572a28;
-$off-white: #f5f5f3;
-$silver-lettering: #bfbfbf;
-$black: #000000;
-
-/* Fonts */
-$default-font: Minion Pro;
-
-/* Viewport Breakpoints */
 $mobileBreakpoint: 600px;
 $tabletBreakpoint: 1000px;
 $desktopBreakpoint: 1280px;
 
-/* Exports */
 :export {
     mobileBreakpoint: $mobileBreakpoint;
     tabletBreakpoint: $tabletBreakpoint;

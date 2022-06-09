@@ -2,7 +2,7 @@ import { signOut } from "firebase/auth";
 import React, { useContext } from "react";
 import { UserContext } from "../lib/context";
 import { auth } from "../lib/firebase";
-import styles from "../styles/AccountInfo.module.scss";
+import styles from "../styles/components/AccountInfo.module.scss";
 
 const logOut = async () => {
   signOut(auth);
